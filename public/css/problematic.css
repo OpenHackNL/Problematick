@@ -2,23 +2,32 @@ body {
 	text-align: center;
 }
 .wrapper {
-	width: 90%;
+	width: 95%;
 	max-width: 600px;
 	margin: 0 auto;
 }
 h1 {
-	font-size: 60px;
-}
-header {
-	background-image: url();
+	font-size: 80px;
+	margin: 30px 10px 10px;
+	font-family: 'Amatic SC', cursive;
 }
 .strangle {
-	max-width: 300px;
+	width: 400px;
+	margin: 20px auto 35px auto;
+	display: block;
+}
+.fist {
+	width: 40px;
+	display: inline-block;
+	margin: 0 10px;
 }
 .slogan {
 	font-size: 25px;
-	font-style: italic;
 	color: #aaa;
+	margin-bottom: 30px;
+	margin-top: 0;
+	font-family: Georgia;
+	font-style: italic;
 }
 button {
 	background: red;
@@ -29,6 +38,8 @@ button {
 	font-weight: bold;
 	color: #fff;
 	margin-bottom: 10px;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
 }
 hr {
 	border: 0;
@@ -38,14 +49,15 @@ time {
 	font-weight: bold;
 }
 .rants h3 {
-	text-align: left;
+	margin: 30px auto;
+	color: red;
 }
 .rants li {
 	text-align: left;
-	background: #eee;
+	background: #FFD7D7;
 	display: block;
-	padding: 10px;
-	margin-bottom: 5px;
+	padding: 30px;
+	margin-bottom: 1px;
 }
 .rant {
 	font-style: italic;
@@ -53,14 +65,24 @@ time {
 	line-height: 1.4em;
 	font-size: 18px;
 }
+ul {
+	padding-left: 0;
+}
 li {
 	list-style: none;
 }
 .signed, .others {
 	text-align: right;
-	font-weight: bold;
-	font-size: 11px;
+	font-weight: normal;
+	font-size: 13px;
 	font-family: Arial, sans-serif;
+	margin: 0.2em;
+}
+.signed {
+	font-weight: bold;
+}
+.fa {
+	color: red;
 }
 .copyright {
 	color: #888;
