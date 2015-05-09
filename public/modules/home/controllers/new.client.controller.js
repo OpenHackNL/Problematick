@@ -33,18 +33,5 @@ angular.module('home').controller('NewController', ['$scope', 'geolocation', 'Pr
       }
     };
 
-    //retrieve coordinates of user using Geolocation API
-    geolocation.getLocation().then(function(data){
-
-      //success getting coordinates
-      $scope.coords = data.coords;
-
-    }, function(error) {
-
-      //unable to get coordinates
-      console.log(error);
-
-    });
-
 	}
 ]);

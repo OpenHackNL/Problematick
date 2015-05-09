@@ -1,6 +1,12 @@
 <section data-ng-controller="NewController">
 
-    <span>{{coords}}</span>
+    <div>
+        <map center="current-location" zoom="12">
+            <info-window position="current-location" visible="true">
+                <span>The location of this problem</span>
+            </info-window>
+        </map>
+    </div>
 
     <form name="problemForm" data-ng-submit="newProblem(problemForm.$valid)" class="form-new-problem form-horizontal" autocomplete="off">
         <fieldset>
@@ -38,5 +44,4 @@
             </div>
         </fieldset>
     </form>
-
 </section>
