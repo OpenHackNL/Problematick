@@ -14,6 +14,9 @@ var ProblemSchema = new Schema({
         type: String,
         trim: true,
         default: ''
+    },
+    date: {
+        type: Date
     }
 });
 

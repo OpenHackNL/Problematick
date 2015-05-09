@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('home').directive('rants', [
-	function() {
+    "Problemresource",
+	function(Problemresource) {
 		return {
 			templateUrl: 'modules/home/views/home.rants.html',
 			restrict: 'EA',
@@ -23,7 +24,9 @@ angular.module('home').directive('rants', [
                         headline: "Misschien leuk om ook je vuurwerk eens op te ruimen. Vorig jaar ook al zo'n teringbende.",
                         date: "2013-01-01"
                     }
-                ]
+                ];
+
+                scope.rants = Problemresource.getAll();
 			}
 		};
 	}

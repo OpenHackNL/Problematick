@@ -17,6 +17,10 @@ exports.create = function(req, res) {
         problem.user = req.user;
     }
 
+    if(!problem.date){
+        problem.date = new Date();
+    }
+
     problem.save(function(err) {
         if (err) {
             return res.status(400).send({
@@ -55,7 +59,7 @@ exports.delete = function(req, res) {
 exports.list = function(req, res) {
     Problem
         .find()
-        //.sort('-created')
+        .sort('-date')
         //.populate('headline')
         .exec(function(err, problems) {
         if (err) {
