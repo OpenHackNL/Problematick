@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('home').controller('NewController', ['$scope', 'geolocation', 'Problemresource',
-	function($scope, geolocation, Problemresource) {
+angular.module('home').controller('NewController', ['$scope', 'geolocation', 'Problemresource', '$timeout', '$location', 'NavigatorGeolocation',
+	function($scope, geolocation, Problemresource, $timeout, $location, NavigatorGeolocation) {
 
 
     // ---------------------------------
@@ -17,6 +17,9 @@ angular.module('home').controller('NewController', ['$scope', 'geolocation', 'Pr
 
           Problemresource.insert($scope.problem, function(){
               $scope.success = true;
+              $timeout(function(){
+                $location.url('/');
+              }, 500);
           }, function(err){
               $scope.error = err;
           });
@@ -32,6 +35,16 @@ angular.module('home').controller('NewController', ['$scope', 'geolocation', 'Pr
         $scope.submitted = true;
       }
     };
+
+
+//        };
+
+        NavigatorGeolocation.getCurrentPosition()
+            .then(function(position) {
+                $scope.problem.lat =  position.coords.latitude;
+                $scope.problem.lng =  position.coords.longitude;
+//                console.log($scope.problem);
+            });
 
 	}
 ]);

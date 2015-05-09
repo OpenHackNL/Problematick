@@ -17,6 +17,17 @@ var ProblemSchema = new Schema({
     },
     date: {
         type: Date
+    },
+    signature: {
+        type: String,
+        trim: true,
+        default: ''
+    },
+    lat: {
+        type: Number
+    },
+    lng: {
+        type: Number
     }
 });
 

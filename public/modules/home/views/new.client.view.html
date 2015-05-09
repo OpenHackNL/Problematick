@@ -14,24 +14,24 @@
                 <label for="description">What's the Problem?</label>
                 <textarea id="description" name="description" class="form-control" data-ng-model="problem.headline" placeholder="Describe your Problem here ..."></textarea>
             </div>
+            <!--<div class="form-group">-->
+                <!--<label for="description">Posted by</label>-->
+                <!--<div class="radio">-->
+                    <!--<label>-->
+                        <!--<input type="radio" name="optionsRadios" id="anonymous" ng-model="problem.anonymous" value="true">-->
+                        <!--Anonymous-->
+                    <!--</label>-->
+                <!--</div>-->
+                <!--<div class="radio">-->
+                    <!--<label>-->
+                        <!--<input type="radio" name="optionsRadios" id="user" ng-model="problem.anonymous" value="false">-->
+                        <!--Myself-->
+                    <!--</label>-->
+                <!--</div>-->
+            <!--</div>-->
             <div class="form-group">
-                <label for="description">Posted by</label>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="anonymous" ng-model="problem.anonymous" value="true">
-                        Anonymous
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="user" ng-model="problem.anonymous" value="false">
-                        Myself
-                    </label>
-                </div>
-            </div>
-            <div ng-show="problem.anonymous" class="form-group">
-                <label for="customName">Your Anonymous Name</label>
-                <input type="text" id="customName" name="customName" class="form-control" data-ng-model="user.customName" placeholder="Custom name">
+                <label for="customName">Your Name (feel free to leave it empty)</label>
+                <input type="text" id="customName" name="customName" class="form-control" data-ng-model="problem.signature" placeholder="Custom name">
             </div>
             <div class="text-center form-group">
                 <button type="submit" class="btn btn-large btn-primary">Post Problem!</button>
