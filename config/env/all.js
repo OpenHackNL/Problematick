@@ -25,8 +25,9 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
-			]
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+        'public/lib/angularjs-geolocation/src/geolocation.js'
+      ]
 		},
 		css: [
 			'public/modules/**/css/*.css',
