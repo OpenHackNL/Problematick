@@ -26,7 +26,8 @@ module.exports = {
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-        'public/lib/angularjs-geolocation/src/geolocation.js'
+        'public/lib/angularjs-geolocation/src/geolocation.js',
+        'public/lib/ngmap/build/scripts/ng-map.min.js'
       ]
 		},
 		css: [

@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('home').controller('NewController', ['$scope', 'geolocation',
-	function($scope, geolocation) {
+angular.module('home').controller('NewController', ['$scope',
+	function($scope) {
 
 
     // ---------------------------------
@@ -25,19 +25,6 @@ angular.module('home').controller('NewController', ['$scope', 'geolocation',
         $scope.submitted = true;
       }
     };
-
-    //retrieve coordinates of user using Geolocation API
-    geolocation.getLocation().then(function(data){
-
-      //success getting coordinates
-      $scope.coords = data.coords;
-
-    }, function(error) {
-
-      //unable to get coordinates
-      console.log(error);
-
-    });
 
 	}
 ]);
