@@ -1,0 +1,4 @@
+<time>{{rant.date | relativeDate}}</time>
+<p class="rant">{{rant.headline}}</p>
+<p class="signed" ng-if="rant.signature">- {{rant.signature}}</p>
+<p class="others" ng-if="rant.upVotesCount">{{rant.upVotesCount}} anderen hebben hier ook last</p>
